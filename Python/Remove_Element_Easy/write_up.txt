@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/remove-element/description/
+
+Intuition
+
+I started out right away with a for loop, and initally wanted to manipulate nums by removing the elements that matched val, and k++ when an elemenet in nums did not match val.
+
+Approach
+
+I quickly realized that removing or moving elements in nums would ruin the for loop logic as indecies and the length of nums would change. I instead just decided to copy the elements that did match val into a new list and copy it to nums after the loop completed. I will figure out the "correct" way to do this problem in the future. For now, this approach achived the desired result.
+Complexity
+
+    Time complexity:
+    O(n2)
+
+    Space complexity:
+    O(n)
