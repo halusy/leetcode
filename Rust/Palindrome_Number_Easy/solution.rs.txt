@@ -1,0 +1,22 @@
+impl Solution {
+    pub fn is_palindrome(x: i32) -> bool {
+
+        let mut y:i32 = x;
+        let mut w:i32 = 0;
+
+        if y < 0 {
+            return false;
+        };
+
+        while y != 0{
+            w = (w * 10) + y%10;
+            y = y/10;
+        }
+
+        if w == x {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

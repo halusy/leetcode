@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/palindrome-number/
+
+Intuition
+
+I knew this could be solved with pure math, no strings and hectic nested loop nonsense.
+
+Approach
+
+After some refreshing on mod and basic math (sad that I needed to do this!), my intuition proved correct and I implemented a very efficient solution. I first pulled each digit and assigned it to a new number "w", while multiplying "w" by 10 each time I added a new digit, essentially copying the original value to "w" backwards. If orig == w, then I returned True. Negatives could never be palindrome, so if orig was < 0, I returned false.
+Complexity
+
+    Time complexity:
+    O(logn)
+
+    Space complexity:
+    O(1)
