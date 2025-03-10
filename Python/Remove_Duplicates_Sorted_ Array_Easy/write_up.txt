@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+Intuition
+
+My intuition was to create a nested while loop, which is what I wound up doing in the end.
+
+Approach
+
+I have not touched nested while loops and the associated logic in a while. This one was fun as it reminded me of the Harvard CX50 I did years ago. I quickly ran into issues with the "in-place" aspect of this problem, and had many bugs to work through. I know there is a more optimal solution, so I will revisit this one in the future. For now, this code passed the test once I worked out the logic issues with the nested while loops.
+Complexity
+
+    Time complexity:
+    O(n2)
+
+    Space complexity:
+    0(n)
