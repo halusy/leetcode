@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/roman-to-integer/
+
+Intuition
+
+My intuition was to create a HashMap and then check each char in the String of Roman Numerals and check the HashMap for which value to add to a number. Also for a reason I cannot articulate, I thought iterating in reverse would be easier.
+
+Approach
+
+This approach turned out to be correct. I went ahead and created the HashMap and the underlying logic. Everything worked out fine (aside from having to learn rust syntax along the way. wow... what a language. It felt like typescript all over again). I just wish I was a bit better about thinking how the problems characteristics can help me write better code. e.g. less lines. That slew of if statements is depressing!
+Complexity
+
+    Time complexity:
+    O(n2)
+
+    Space complexity:
+    O(1)

@@ -1,0 +1,41 @@
+use std::io::stdout;
+use std::collections::HashMap;
+use std::ops::Add;
+
+impl Solution {
+    pub fn roman_to_int(s: String) -> i32 {
+        
+        let mut romans = HashMap::new();
+        romans.insert('I', 1);
+        romans.insert('V', 5);
+        romans.insert('X', 10);
+        romans.insert('L', 50);
+        romans.insert('C', 100);
+        romans.insert('D', 500);
+        romans.insert('M', 1000);
+
+        let length:usize = s.chars().count().try_into().unwrap();
+        let mut i:usize = (length - 1).try_into().unwrap();
+        let mut number = 0;
+
+        loop {
+            let charr:char = s.chars().nth(i).unwrap();
+            number = number.add(romans.get(&charr).unwrap());
+            if i != (length - 1){
+                let subchecker:char = s.chars().nth(i + 1).unwrap();
+                if charr == 'I' && (subchecker == 'V' || subchecker == 'X'){
+                    number = number - 2;
+                } else if charr == 'X' && (subchecker == 'L' || subchecker == 'C'){
+                    number = number - 20;
+                } else if charr == 'C' && (subchecker == 'D' || subchecker == 'M'){
+                    number = number - 200;
+                };
+            };
+
+            if i == 0 {break};
+            i -= 1;
+        }
+
+        return number;
+    }
+}
