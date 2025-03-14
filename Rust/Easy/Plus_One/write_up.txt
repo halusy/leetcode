@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/plus-one/
+
+Intuition
+
+I really wanted a O(1) solution, so attemped from the beginning to make this possible.
+
+Approach
+
+After trying to make this O(1), I quickly realized I would need to use at least one loop. I know there is a better way to write the function, but this is where I am at ATM. I first tried to turn the Vec into an int, add one, then convert it back to a Vec. However I quickly realized I would overflow any rust int. I also overlooked the fact that if you had [9,9], you would need to return [1,0,0]. My inital solution would've returned [9,1,0]. I remedied this issue, but wish I thought of this from the beggining since I could've coded a much more efficent function.
+Complexity
+
+    Time complexity:
+    O(n2)
+
+    Space complexity:
+    O(n)

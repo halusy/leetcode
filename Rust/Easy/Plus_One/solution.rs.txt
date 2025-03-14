@@ -1,0 +1,44 @@
+impl Solution {
+    pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
+        
+        // variable setup 
+        
+        let last_index:usize = digits.len() - 1;
+        let mut last_number = (digits[last_index] + 1);
+        let mut final_vec:Vec<i32> = digits;
+
+        // manipulating/prepping last number and appending it
+
+        final_vec.remove(last_index.try_into().unwrap());
+        final_vec.push(last_number);
+
+
+        let mut i:usize = last_index;
+
+        loop {
+            if i != 0 {
+                if final_vec[i] == 10{
+                    final_vec.remove(i);
+                    final_vec.push(0);
+                    final_vec[i-1] = final_vec[i-1] + 1;
+                }
+            }
+
+            if i == 0 && final_vec[i] == 10 {
+                final_vec.remove(i);
+                let mut fixer:Vec<i32> = Vec::new();
+                fixer.push(1);
+                fixer.push(0);
+                fixer.append(&mut final_vec);
+                return fixer;
+
+            }
+            if i == 0 { break; };
+            i -= 1;
+            
+        }
+
+        return final_vec;
+
+    }
+}
