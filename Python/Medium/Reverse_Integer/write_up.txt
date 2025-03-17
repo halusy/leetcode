@@ -1,0 +1,17 @@
+Note: This solution is terrible. I will redo it in rust soon!
+Problem Link: https://leetcode.com/problems/reverse-integer/solutions
+
+Intuition
+
+I had a feeling I could do this with pure math using mod, but decided to take the easy way out, switch from rust to python, and write the most tragic program imaginable.
+
+Approach
+
+I ignored my intuition to use a simple mod function, and instead opted for a for loop. I converted the integer to a string so I could iterate the "number", and used a while loop with case handling to output the reversed number. I should be banned from coding for this.
+Complexity
+
+    Time complexity:
+    O(n2) due to string concatenation
+
+    Space complexity:
+    O(n)
