@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/valid-palindrome/
+
+Intuition
+
+Seeing this was a "Two Pointer" topic questions (and I had never heard about these before) I did some research and found the concept fascinating and efficient. I attempted to implement a Two Pointer based solution.
+
+Approach
+
+I decided to first convert the strings to a Rust Vec, which can be easily traversed. I filtered out any non-alphanumeric characters and made all the characters lowercase for comparison. This is when the two pointers concept comes into play. I created the classic two pointer while loop setup (which was so awesome, another tool in my belt) and the program worked perfectly. Fun one! These are getting easier and easier as I do them.
+Complexity
+
+    Time complexity:
+    O(n)
+
+    Space complexity:
+    O(1)
