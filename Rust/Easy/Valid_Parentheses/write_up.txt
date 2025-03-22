@@ -1,0 +1,16 @@
+Problem Link: https://leetcode.com/problems/valid-parentheses/
+
+Intuition
+
+A ridiculous amount of if statements...
+
+Approach
+
+I initially tried getting home with about 10 if statements. It actually passed 98 of 100 test cases, but case 99 pretty much made the code non-viable. I did some research and learned about rust's match. I should have found it sooner by seeing a switch was the best approach, but for some reason I went for the if statements. I learned a lot from this problem, and cannot wait to continue!
+Complexity
+
+    Time complexity:
+    O(n)
+
+    Space complexity:
+    O(n)

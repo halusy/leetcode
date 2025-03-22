@@ -1,0 +1,48 @@
+        //have to redo as a stack
+
+        let mut ans:bool = false;
+        let mut rb:i32 = 0;
+        let mut cb:i32 = 0;
+        let mut sb:i32 = 0;
+        let mut lastchar:char = 'a';
+
+        for character in s.chars() {
+
+            if character == '(' {
+                rb += 1;
+            } if character == '{' {
+                cb += 1;
+            } if character == '[' {
+                sb += 1;
+            }
+            
+            if character == ')' {
+                rb -= 1;
+                if lastchar == '{' || lastchar == '[' {
+                    return false;
+                }
+            } if character == '}' {
+                cb -= 1;
+                if lastchar == '(' || lastchar == '[' {
+                    return false;
+                }
+            } if character == ']' {
+                sb -= 1;
+                if lastchar == '(' || lastchar == '{' {
+                    return false;
+                }
+            }
+            lastchar = character; 
+
+            if rb < 0 || cb < 0 || sb < 0 {
+                return false;
+            }
+        }
+
+        if (rb == 0 ) && (cb == 0) && (sb == 0) {
+            ans = true;
+        }
+
+        return ans;
+        
+    }
